@@ -25,9 +25,10 @@
 // const HDWallet = require('truffle-hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
 //
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
-//const HDWalletProvider = require('truffle-hdwallet-provider');
+//const fs = require('fs');
+//const mnemonic = fs.readFileSync(".secret").toString().trim();
+const HDWalletProvider = require('truffle-hdwallet-provider');
+
 
 module.exports = {
   /**
@@ -49,9 +50,19 @@ module.exports = {
     //
     development: {
       host: "127.0.0.1",     // Localhost (default: none)
-      port: 8545,            // Standard Ethereum port (default: none)
+      port: 9545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
-      websockets: true
+      websockets: true,
+
+    },
+
+    rinkeby: {
+      provider: () => new HDWalletProvider("adult forward kiwi famous mistake soldier predict undo deal canyon craft crew", "https://rinkeby.infura.io/v3/722072edfd314fdc83ab9bca4aefa8ee"),
+        network_id: 4,       // rinkeby's id
+        gas: 4500000,        // rinkeby has a lower block limit than mainnet
+        gasPrice: 10000000000,
+        from: '0xA910A4d5d23D4afe71bDa78Cf46CaF0C7b979b8e'
+
     },
 
     //rinkeby: {

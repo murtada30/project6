@@ -11,4 +11,10 @@ module.exports = function(deployer) {
   deployer.deploy(RetailerRole);
   deployer.deploy(ConsumerRole);
   deployer.deploy(SupplyChain);
+
+  //deployer.deploy(FarmerRole,{from: accounts[4]});
+  //deployer.deploy(DistributorRole,{from: accounts[4]});
+  //deployer.deploy(RetailerRole,{from: accounts[4]});
+  //deployer.deploy(ConsumerRole,{from: accounts[4]});
+  //deployer.deploy(SupplyChain,{from: accounts[4]});
 };
